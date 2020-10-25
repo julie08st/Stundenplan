@@ -247,8 +247,21 @@ function clickCounter() {
   
  
   <!--<a href="#" target="blank" class="btn btn-primary">Reset &raquo;</a>-->
+  <script>
+  function clickCounterReset() {
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)-localStorage.clickcount;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
+    }
+  }
+  </script>
+  
   <div>
-    <center><button class="Button" type="button">Reset</button></center>
+    <center><button onclick = "clickCounterReset()" class="Button" type="button">Reset</button></center>
   </div>
 
   </body> 

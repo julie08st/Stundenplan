@@ -16,7 +16,7 @@ function clickCounter() {
   function clickCounterReset() {
   if(typeof(Storage) !== "undefined") {
     if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)-localStorage.clickcount;
+      localStorage.clickcount = Number(localStorage.clickcount)-1;
     } else {
       localStorage.clickcount = 1;
     }
@@ -176,7 +176,7 @@ Freitag6 = 'Mathe';
         </tr>
         <tr>
           <td>7:45</td>
-          <td id="faecher"><p><button onclick="clickCounter()" type="button">Fächer</button></p>
+          <td id="faecher"></td>
 
 
 <div id="result"></div>
@@ -259,21 +259,45 @@ Freitag6 = 'Mathe';
     <script src="script.js"></script>
   
   <script>
-  var i = 0;
-  var j = 0;
+  var i = 1;
   
-  var Faecher = ["Deutsch", "Mathe", "Franz"];
+  
+  var Faecher = ["Deutsch", "Mathe", "Franz", "Latein", "Englisch", "Biologie", "Chemie", "Physik", "Informatik", "Sport", "Musik", "Kunst", "Religion", "Ethik", "PoWi", "KL", "Erdkunde", "Literatur","Sozialkunde", "Anderes"];
   //document.write(cars[0]);
 
+  
+  //function weiter(){
+    //i = i + 1
+
+  //}
+  
   function liste(){
-    var j = 0;
-    var i = -1;
-    //var i = i + 1;
+    
+    //weiter();
+    var i = localStorage.clickcount;
+    
+    
     //document.write(Faecher[0]);
 
-    document.getElementById("faecher").innerHTML = Faecher[i + 1];
-    var j = j + 1 
+    document.getElementById("faecher").innerHTML = Faecher[i];
+     
+    clickCounter();
   }
+
+  function listeReset(){
+    var j = 0;
+    //weiter();
+    var i = localStorage.clickcount;
+    
+    
+    //document.write(Faecher[0]);
+
+    document.getElementById("faecher").innerHTML = Faecher[i];
+    
+    clickCounterReset();
+  }
+  
+  
   
   
   
@@ -292,7 +316,7 @@ Freitag6 = 'Mathe';
   
   
   <div>
-    <center><button onclick = "clickCounterReset()" class="Button" type="button">Reset</button></center>
+    <center><button onclick = "listeReset()" class="Button" type="button">Zurückschalten</button></center>
     
     <center><button onclick = "liste()" class="Button" type="button">Durchschalten</button></center>
   

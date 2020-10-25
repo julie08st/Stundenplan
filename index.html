@@ -1,0 +1,226 @@
+<script>
+
+Montag1 = 'Deutsch';
+Montag2 = 'Deutsch';
+Montag3 = 'Powi';
+Montag4 = 'Powi';
+Montag5 = 'Religion';
+Montag6 = 'Religion';
+
+Dienstag1 = 'Englisch';
+Dienstag2 = 'Englisch';
+Dienstag3 = 'Kunst';
+Dienstag4 = 'Kunst';
+Dienstag5 = 'Geschichte';
+Dienstag6 = 'Geschichte';
+
+Mittwoch1 = 'Mathe';
+Mittwoch2 = 'Mathe';
+Mittwoch3 = 'Biologie';
+Mittwoch4 = 'Biologie';
+Mittwoch5 = 'Klassenstunde';
+Mittwoch6 = '';
+Mittwoch7 = 'Sport';
+Mittwoch8 = 'Sport';
+
+Donnerstag1 = 'Deutsch';
+Donnerstag2 = 'Deutsch';
+Donnerstag3 = 'Latein';
+Donnerstag4 = 'Latein';
+Donnerstag5 = '';
+Donnerstag6 = '';
+
+Freitag1 = '';
+Freitag2 = '';
+Freitag3 = 'Englisch';
+Freitag4 = 'Englisch';
+Freitag5 = 'Mathe';
+Freitag6 = 'Mathe';
+
+
+
+
+</script>
+
+<!--<script>
+    <?php
+    //Verbindung zur Datenbank herstellen
+    mysql_connect("localhost", "Benutzername","Passwort") or die ("Verbindung nicht möglich");
+    mysql_select_db("Datenbank-Name") or die ("Datenbank existiert nicht");
+     
+    $result = mysql_query("INSERT INTO kunden (name, adresse) VALUES ('Hans Meier', 'Wuppernweg 19')");
+    ?>   
+</script>-->
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Stundenplan</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	 crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	 crossorigin="anonymous">
+
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	 crossorigin="anonymous">
+
+	</script>
+</head>
+
+<body>
+
+	<!--<input type="text" name="" value="">--> 
+
+	<main role="main">
+
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+
+
+		<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+			<a class="navbar-brand" href="index.html">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample06">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+       <div class="collapse navbar-collapse" id="navbarsExample06">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+    </ul>
+    
+  </div>
+</nav>
+<div class="jumbotron">
+  <h1 class="display-4">Stundenplan erstellen</h1>
+  <p class="lead">Erstelle deinen Stundenplan
+    
+  </p>
+  
+  
+  <a class="btn btn-primary btn-lg" href="#" role="button">Mehr erfahren</a>
+</div>
+
+</main>
+<y></y>
+<footer class="container">
+<!--<center><table class="tabelle" border = 1>
+   <tr>
+     <th>Zeit</th>
+     <th>Montag </th>
+     <th>Dienstag </th>
+     <th>Mittwoch </th>
+     <th>Donnerstag </th>
+     <th>Freitag </th>
+   </tr>
+   <tr>
+     <th></th>
+   </tr>-->
+</footer>
+<div class="col-5">
+    
+   <div class="row justify-content-between">
+    <div class="col-5">
+      <table class="animiert" class="table table-bordered" border = 2>
+        <!--<caption>.table .table-bordered</caption>-->
+    <tr>
+          <th>Zeit</th>
+          <th> Montag </th>
+          <th> Dienstag </th>
+          <th> Mittwoch </th>
+          <th> Donnerstag </th>
+          <th> Freitag </th>
+          
+        </tr>
+        <tr>
+          <td>7:45</td>
+          <td><input type="text" name="Montag1" value=""></td>
+          <td><script>document.write(Dienstag1);</script></td>
+          <td><script>document.write(Mittwoch1);</script></td>
+          <td><script>document.write(Donnerstag1);</script></td>
+          <td><script>document.write(Freitag1);</script></td>
+        </tr>
+        <tr>
+          <td>8:30</td>
+          <td><script>document.write(Montag2);</script></td>
+          <td><script>document.write(Dienstag2);</script></td>
+          <td><script>document.write(Mittwoch2);</script></td>
+          <td><script>document.write(Donnerstag2);</script></td>
+          <td><script>document.write(Freitag2);</script></td>
+        </tr>
+        <tr>
+          <td>9:45</td>
+          <td><script>document.write(Montag3);</script></td>
+          <td><script>document.write(Dienstag3);</script></td>
+          <td><script>document.write(Mittwoch3);</script></td>
+          <td><script>document.write(Donnerstag3);</script></td>
+          <td><script>document.write(Freitag3);</script></td>
+        </tr>
+        <tr>
+          <td>10:30</td>
+          <td><script>document.write(Montag4);</script></td>
+          <td><script>document.write(Dienstag4);</script></td>
+          <td><script>document.write(Mittwoch4);</script></td>
+          <td><script>document.write(Donnerstag4);</script></td>
+          <td><script>document.write(Freitag4);</script></td>
+        </tr>
+        <tr>
+          <td>11:45</td>
+          <td><script>document.write(Montag5);</script></td>
+          <td><script>document.write(Dienstag5);</script></td>
+          <td><script>document.write(Mittwoch5);</script></td>
+          <td><script>document.write(Donnerstag5);</script></td>
+          <td><script>document.write(Freitag5);</script></td>
+        </tr>
+        <tr>
+          <td>12:30</td>
+          <td><script>document.write(Montag6);</script></td>
+          <td><script>document.write(Dienstag6);</script></td>
+          <td><script>document.write(Mittwoch6);</script></td>
+          <td><script>document.write(Donnerstag6);</script></td>
+          <td><script>document.write(Freitag6);</script></td>
+        </tr>  
+        <tr>
+          <td>13:45</td>
+          <td></td>
+          <td></td>
+          <td><script>document.write(Mittwoch7);</script></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14:30</td>
+          <td></td>
+          <td></td>
+          <td><script>document.write(Mittwoch8);</script></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

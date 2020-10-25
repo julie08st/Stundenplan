@@ -1,4 +1,31 @@
 <script>
+function clickCounter() {
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
+  }
+}
+</script>
+
+
+<script>
+  function clickCounterReset() {
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)-localStorage.clickcount;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
+    }
+  }
+</script>
+
+<script>
 	Montag1 = 'Deutsch';
 Montag2 = 'Deutsch';
 Montag3 = 'Powi';
@@ -149,22 +176,9 @@ Freitag6 = 'Mathe';
         </tr>
         <tr>
           <td>7:45</td>
-          <td><script>
-function clickCounter() {
-  if(typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
-    } else {
-      localStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
-  }
-}
-</script>
-<!--</head>
-<body>-->
+          <td><p><button onclick="clickCounter()" type="button">Fächer</button></p>
 
-<p><button onclick="clickCounter()" type="button">Fächer</button></p>
+
 <div id="result"></div>
 <!--<p>Click the button to see the counter increase.</p>
 <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p></td>-->
@@ -244,21 +258,26 @@ function clickCounter() {
 
     <script src="script.js"></script>
   
+  <script>
+  function liste():{
+    i + 1;
+  }
+  var cars = ["Saab", "Volvo", "BMW"];
+  document.write(cars[0]);
+  
+  var j = 0;
+  
+  //while (j <= i) {
+    //document.write(cars[j])
+    
+    //var i = i+1;
+  //}
+  </script>
+
   
  
   <!--<a href="#" target="blank" class="btn btn-primary">Reset &raquo;</a>-->
-  <script>
-  function clickCounterReset() {
-  if(typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)-localStorage.clickcount;
-    } else {
-      localStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
-    }
-  }
-  </script>
+  
   
   <div>
     <center><button onclick = "clickCounterReset()" class="Button" type="button">Reset</button></center>

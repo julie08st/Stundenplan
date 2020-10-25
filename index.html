@@ -1,6 +1,5 @@
 <script>
-
-Montag1 = 'Deutsch';
+	Montag1 = 'Deutsch';
 Montag2 = 'Deutsch';
 Montag3 = 'Powi';
 Montag4 = 'Powi';
@@ -36,9 +35,6 @@ Freitag3 = 'Englisch';
 Freitag4 = 'Englisch';
 Freitag5 = 'Mathe';
 Freitag6 = 'Mathe';
-
-
-
 
 </script>
 
@@ -81,7 +77,7 @@ Freitag6 = 'Mathe';
 
 <body>
 
-	<!--<input type="text" name="" value="">--> 
+	<!--<input type="text" name="" value="">-->
 
 	<main role="main">
 
@@ -153,7 +149,25 @@ Freitag6 = 'Mathe';
         </tr>
         <tr>
           <td>7:45</td>
-          <td><input type="text" name="Montag1" value=""></td>
+          <td><script>
+function clickCounter() {
+  if(typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Clicks: " + localStorage.clickcount;
+  }
+}
+</script>
+<!--</head>
+<body>-->
+
+<p><button onclick="clickCounter()" type="button">Fächer</button></p>
+<div id="result"></div>
+<!--<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p></td>-->
           <td><script>document.write(Dienstag1);</script></td>
           <td><script>document.write(Mittwoch1);</script></td>
           <td><script>document.write(Donnerstag1);</script></td>
@@ -220,8 +234,22 @@ Freitag6 = 'Mathe';
       <p></p>
       <p></p>
     </div>
+  </div>
+</div>
+    
+    
+    <!--<button type="button">Reset</button>-->
+
+    <!--<a class="weis">ajhfo igozv gf ozsgadlfizag rozf sadzgf zg</a>-->
 
     <script src="script.js"></script>
-    
+  
+  
+ 
+  <!--<a href="#" target="blank" class="btn btn-primary">Reset &raquo;</a>-->
+  <div>
+    <button class="Button" type="button">Reset</button>
+  </div>
+
   </body>
 </html>

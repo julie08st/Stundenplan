@@ -176,7 +176,7 @@ Freitag6 = 'Mathe';
         </tr>
         <tr>
           <td>7:45</td>
-          <td><p><button onclick="clickCounter()" type="button">Fächer</button></p>
+          <td id="faecher"><p><button onclick="clickCounter()" type="button">Fächer</button></p>
 
 
 <div id="result"></div>
@@ -262,12 +262,17 @@ Freitag6 = 'Mathe';
   var i = 0;
   var j = 0;
   
-  var cars = ["Saab", "Volvo", "BMW"];
+  var Faecher = ["Deutsch", "Mathe", "Franz"];
   //document.write(cars[0]);
 
   function liste(){
-    var i = i + 1;
-    document.write(cars[0]);
+    var j = 0;
+    var i = -1;
+    //var i = i + 1;
+    //document.write(Faecher[0]);
+
+    document.getElementById("faecher").innerHTML = Faecher[i + 1];
+    var j = j + 1 
   }
   
   
